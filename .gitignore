@@ -1,0 +1,9 @@
+# Ignore all subfolders inside the transcripts directory
+transcripts/*/
+
+# Ignore common system and Python files
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.log
