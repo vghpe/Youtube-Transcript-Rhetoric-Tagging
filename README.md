@@ -15,7 +15,38 @@ This project downloads audio from a YouTube video, transcribes it using Whisper,
 - **Configurable:** A separate `config.json` holds settings for the OpenAI model, temperature, and prompt details.
 - **Organized Output:** Automatically creates a folder under `transcripts/` based on the video title.
 
-## Installation
+## Usage
+
+1. **Download and Transcribe a Video**
+
+   Run the bash script with a YouTube video ID. This command will:
+   - Download audio from the video.
+   - Transcribe the audio using Whisper.
+   - Save the transcript in a subfolder under `transcripts/` named after the video's title.
+
+   Example usage:
+   `./transcribe_and_tag.sh dQw4w9WgXcQ`
+
+2. **Tag the Transcript (Optional)**
+
+   After transcription, the script will prompt:
+
+   Would you like to tag the transcript using OpenAI? (y/N):
+
+   - If you answer `y`, the script sends the transcript to the OpenAI API, generates a tagged transcript, and saves it as `tagged_transcript.txt` in the same folder.
+   - If you answer `n`, the tagging step is skipped.
+
+3. **Highlight and Filter Tagged Text**
+
+  Use the provided HTML tool (`index.html`) to view your tagged transcript:
+  - Open `index.html` in a browser.
+  - Open the file `tagged_transcript.txt` in a text editor and copy its entire contents.
+  - Paste this content into the "Paste Tagged Text" textarea on the webpage.
+  - Click **Highlight** to render the inline tags with color-coding.
+  - Use the checkboxes to show or hide specific tag types (Factual Claim, Speculation, etc.).
+
+
+
 
 ### Dependencies
 
@@ -29,12 +60,3 @@ This project downloads audio from a YouTube video, transcribes it using Whisper,
 - **OpenAI Python Library:** For tagging the transcript  
   _Installation: `pip install openai`_
 
-### Virtual Environment (Recommended)
-
-It’s best to use a virtual environment to manage dependencies. For example:
-
-```bash
-python3 -m venv venv
-source venv/bin/activate      # On macOS/Linux
-venv\Scripts\activate         # On Windows
-pip install -r requirements.txt
