@@ -25,7 +25,7 @@ This project downloads audio from a YouTube video, transcribes it using Whisper,
    - Save the transcript in a subfolder under `transcripts/` named after the video's title.
 
    Example usage:
-   `./transcribe_and_tag.sh dQw4w9WgXcQ`
+   `./transcribe_and_tag.sh YFtHjV4c4uw`
 
 2. **Tag the Transcript (Optional)**
 
