@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
-      max-width: 800px;
+      max-width: 750px;
       margin: auto;
     }
     textarea {
@@ -75,7 +75,16 @@
     }
     #filters label {
       margin-right: 10px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-weight: bold;
     }
+    /* Apply corresponding highlight colors to filter labels */
+    #filters label.fc { background-color: #b3e5fc; }
+    #filters label.op { background-color: #c8e6c9; }
+    #filters label.el { background-color: #ffcdd2; }
+    #filters label.rt { background-color: #ffecb3; }
+    #filters label.sp { background-color: #d1c4e9; }
   </style>
 </head>
 <body>
@@ -86,11 +95,11 @@
 
   <h2>Filter by Tag</h2>
   <div id="filters">
-    <label><input type="checkbox" class="filter-checkbox" value="fc" checked> Factual Claim [FC]</label>
-    <label><input type="checkbox" class="filter-checkbox" value="op" checked> Opinion [OP]</label>
-    <label><input type="checkbox" class="filter-checkbox" value="el" checked> Emotional Language [EL]</label>
-    <label><input type="checkbox" class="filter-checkbox" value="rt" checked> Rhetorical Technique [RT]</label>
-    <label><input type="checkbox" class="filter-checkbox" value="sp" checked> Speculation [SP]</label>
+    <label class="fc"><input type="checkbox" class="filter-checkbox" value="fc" checked> Factual Claim [FC]</label>
+    <label class="op"><input type="checkbox" class="filter-checkbox" value="op" checked> Opinion [OP]</label>
+    <label class="el"><input type="checkbox" class="filter-checkbox" value="el" checked> Emotional Language [EL]</label>
+    <label class="rt"><input type="checkbox" class="filter-checkbox" value="rt" checked> Rhetorical Technique [RT]</label>
+    <label class="sp"><input type="checkbox" class="filter-checkbox" value="sp" checked> Speculation [SP]</label>
   </div>
 
   <h2>Highlighted Output</h2>
