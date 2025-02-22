@@ -12,7 +12,7 @@ This project downloads audio from a YouTube video, transcribes it using Whisper,
   - [EL] Emotive Language
   - [PL] Pejorative Language
   - [DS] Dismissive/Snarky
-- **Configurable:** A separate `config.json` holds settings for the OpenAI model, temperature, and prompt details.
+- **Configurable:** A separate `config.yaml` holds settings for the OpenAI model, temperature, and prompt details.
 - **Organized Output:** Automatically creates a folder under `transcripts/` based on the video title.
 
 ## Usage
