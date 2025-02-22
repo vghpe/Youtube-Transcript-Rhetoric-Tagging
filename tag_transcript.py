@@ -1,12 +1,14 @@
 import json
+import yaml
 import argparse
 import os
 from openai import OpenAI
 
 # Load config
 def load_config():
-    with open("config.json", "r") as file:
-        return json.load(file)
+    """Load the YAML configuration file."""
+    with open("config.yaml", "r", encoding="utf-8") as file:
+        return yaml.safe_load(file)
 
 # Function to call OpenAI API
 def tag_transcript(input_file, output_file):
