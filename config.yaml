@@ -8,6 +8,7 @@ prompt: |
   - [EL] Emotional Language – Language evoking emotions.
   - [RT] Rhetorical Technique – Sarcasm, irony, or rhetorical flourish.
   - [SP] Speculation – Uncertainty, guesswork, or predictions.
+  - Leave segments untagged if they don't match [FC], [OP], [EL], [RT], or [SP].
 
   **Instructions:**
   - Segment text into meaningful parts.
