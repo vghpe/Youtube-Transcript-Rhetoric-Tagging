@@ -7,12 +7,12 @@ This project downloads audio from a YouTube video, transcribes it using Whisper,
 - **Audio Extraction:** Uses `yt-dlp` to download audio from a YouTube video.
 - **Transcription:** Leverages Whisper to transcribe the audio.
 - **Tagging:** Processes the transcript through OpenAI to insert inline tags for:
-  - [FC] Factual Claim
-  - [SP] Speculation
-  - [EL] Emotive Language
-  - [PL] Pejorative Language
-  - [DS] Dismissive/Snarky
-- **Configurable:** A separate `config.json` holds settings for the OpenAI model, temperature, and prompt details.
+  - [FC] Factual Claim – Objective, verifiable statements.
+  - [OP] Opinion – Subjective assertions.
+  - [EL] Emotional Language – Language evoking emotions.
+  - [RT] Rhetorical Technique – Sarcasm, irony, or rhetorical flourish.
+  - [SP] Speculation – Uncertainty, guesswork, or predictions.
+- **Configurable:** A separate `config.yaml` holds settings for the OpenAI model, temperature, and prompt details.
 - **Organized Output:** Automatically creates a folder under `transcripts/` based on the video title.
 
 ## Usage
